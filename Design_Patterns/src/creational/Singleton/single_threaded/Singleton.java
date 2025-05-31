@@ -5,12 +5,7 @@ public class Singleton {
     public String value;
 
     private Singleton(String value){
-        try{
-            Thread.sleep(1000);
-        } catch (InterruptedException ex){
-            ex.printStackTrace();
-        }
-
+        System.out.println("Singleton is Initiated.");
         this.value=value;
     }
 
@@ -18,7 +13,6 @@ public class Singleton {
         if( instance==null ){
             instance = new Singleton(value);
         }
-
         return instance;
     }
 }
